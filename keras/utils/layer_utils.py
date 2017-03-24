@@ -27,7 +27,7 @@ def layer_from_config(config, custom_objects={}):
         layer_class = Sequential
     elif class_name == 'Graph':
         layer_class = Graph
-    elif class_name in ['Model', 'Container', 'OrdinalModel]:
+    elif class_name in ['Model', 'Container', 'OrdinalModel']:
         layer_class = Model
     else:
         layer_class = get_from_module(class_name, globals(), 'layer',
